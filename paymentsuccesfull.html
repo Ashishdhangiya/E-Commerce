@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Success | Anon</title>
+  <link rel="stylesheet" href="payment.html">
+  <link rel="icon"
+        href="data:image/png;base64,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">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+    }
+
+    .payment-success {
+      max-width: 420px;
+      margin: 5rem auto;
+      padding: 2rem;
+      background: #f0fdf4;
+      border: 1px solid #34d399;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .success-icon {
+      font-size: 3rem;
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: #065f46;
+      margin-bottom: 0.5rem;
+    }
+
+    .payment-success p {
+      color: #047857;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .order-summary {
+      background: #e6fffa;
+      border: 1px dashed #14b8a6;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .order-summary p {
+      margin: 0.4rem 0;
+      color: #064e3b;
+      font-size: 0.9rem;
+    }
+
+    .back-home {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-home:hover {
+      background: #059669;
+    }
+  </style>
+</head>
+<body>
+
+<div class="payment-success">
+  <div class="success-icon">✅</div>
+  <h2>Payment Successful!</h2>
+  <p>Thank you for your order. We've sent you an email confirmation.</p>
+
+  <div class="order-summary" id="orderSummary">
+    <!-- Order summary will be filled via JS -->
+  </div>
+
+  <a href="index.html" class="back-home">Continue Shopping</a>
+</div>
+
+<script>
+  // Simulate order details
+  const order = {
+    id: Math.floor(Math.random() * 900000 + 100000),
+    total: '₹2,499.00',
+    items: 3,
+    eta: 'May 4 - May 6, 2025'
+  };
+
+  document.getElementById('orderSummary').innerHTML = `
+    <p><strong>Order ID:</strong> #${order.id}</p>
+    <p><strong>Total:</strong> ${order.total}</p>
+    <p><strong>Items:</strong> ${order.items}</p>
+    <p><strong>Estimated Delivery:</strong> ${order.eta}</p>
+  `;
+</script>
+
+</body>
+</html>

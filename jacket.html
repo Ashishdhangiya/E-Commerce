@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANON</title>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+
+        --spanish-gray: hsl(0, 0%, 60%);
+        --sonic-silver: hsl(0, 0%, 47%);
+        --eerie-black: hsl(0, 0%, 13%);
+        --salmon-pink: hsl(353, 100%, 78%);
+        --sandy-brown: hsl(29, 90%, 65%);
+        --bittersweet: hsl(0, 100%, 70%);
+        --ocean-green: hsl(152, 51%, 52%);
+        --davys-gray: hsl(0, 0%, 33%);
+        --cultured: hsl(0, 0%, 93%);
+        --white: hsl(0, 100%, 100%);
+        --onyx: hsl(0, 0%, 27%);
+
+        --fs-1: 1.563rem;
+        --fs-2: 1.375rem;
+        --fs-3: 1.25rem;
+        --fs-4: 1.125rem;
+        --fs-5: 1rem;
+        --fs-6: .938rem;
+        --fs-7: .875rem;
+        --fs-8: .813rem;
+        --fs-9: .75rem;
+        --fs-10: .688rem;
+        --fs-11: .625rem;
+
+        --weight-300: 300;
+        --weight-400: 400;
+        --weight-500: 500;
+        --weight-600: 600;
+        --weight-700: 700;
+
+        --border-radius-medium: 10px;
+        --border-radius-small: 5px;
+
+        --transition-timing: .2s ease;
+    }
+
+    *,
+    ::before,
+    ::after {
+        margin: 0;
+        padding: 0;
+        color: #b6b6b6;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    /* header */
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--cultured);
+    }
+
+    .show {
+        color: hsla(353, 100%, 78%, 1);
+        font-size: 30px;
+        margin: 0;
+    }
+
+    input {
+
+        font-size: var(--fs-7);
+        padding: 10px 15px;
+        padding-right: 50px;
+        border: 1px solid var(--cultured);
+        border-radius: var(--border-radius-medium);
+        height: 50%;
+    }
+
+    .japn1 {
+        width: 120px;
+    }
+
+    .pro-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 40px;
+        background-color: white;
+    }
+
+    .part-1 {
+        background-color: var(--white);
+        border: 1px solid var(--cultured);
+        border-radius: var(--border-radius-medium);
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .part-1:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .part-1 img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-small);
+        margin-bottom: 15px;
+    }
+
+    .part-1 h2 {
+        font-size: var(--fs-4);
+        font-weight: var(--weight-600);
+        color: var(--eerie-black);
+        margin: 10px 0;
+    }
+
+    .part-1 p {
+        font-size: var(--fs-5);
+        color: var(--sonic-silver);
+        margin-bottom: 15px;
+    }
+
+    /* Buy Now Button */
+    .part-1 button {
+        background-color: var(--salmon-pink);
+        color: var(--white);
+        border: none;
+        padding: 12px 24px;
+        font-size: var(--fs-6);
+        border-radius: var(--border-radius-small);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .part-1 button:hover {
+        background-color: var(--bittersweet);
+    }
+
+    /* footer */
+
+    /* FOOTER */
+
+    footer {
+    background: var(--eerie-black);
+    padding: 30px 0;
+    
+    
+}
+
+.footer-category {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--onyx);
+}
+
+.footer-category-title {
+    color: var(--salmon-pink);
+    font-size: var(--fs-6);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.footer-category-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 3px;
+    margin-bottom: 15px;
+}
+
+.category-box-title {
+    color: var(--spanish-gray);
+    font-size: var(--fs-8);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+}
+
+.footer-category-link {
+    position: relative;
+    color: var(--sonic-silver);
+    font-size: var(--fs-7);
+    text-transform: capitalize;
+    transition: var(--transition-timing);
+}
+
+    .footer-category-link:hover { color: var(--spanish-gray); }
+
+    .footer-category-link:not(:last-child)::after {
+        position: absolute;
+        content: '';
+        top: 3px;
+        right: -10px;
+        background: var(--sonic-silver);
+        width: 1px;
+        height: 15px;
+    }
+
+.footer-nav {
+    border-bottom: 1px solid var(--onyx);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+    .footer-nav .nav-title {
+        position: relative;
+        color: var(--white);
+        font-size: var(--fs-7);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
+
+        .footer-nav .nav-title::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: var(--salmon-pink);
+            width: 60px;
+            height: 1px;
+        }
+
+    .footer-nav .social-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+.footer-nav-list:not(:last-child) { margin-bottom: 20px; }
+
+.footer-nav-item { padding: 3px 0; }
+
+    .footer-nav-link, .footer-nav-item .content {
+        width: max-content;
+        color: var(--sonic-silver);
+        font-size: var(--fs-7);
+        text-transform: capitalize;
+        transition: var(--transition-timing);
+    }
+
+        .footer-nav-link:hover { color: var(--salmon-pink); }
+
+        .footer-nav-item.flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-nav-item .content {
+            font-style: normal;
+            margin-bottom: 5px;
+        }
+
+        .footer-nav-item .icon-box {
+            color: var(--sonic-silver);
+            font-size: 25px;
+        }
+
+            .footer-nav-item .icon-box ion-icon { --ionicon-stroke-width: 30px; }
+
+.social-link .footer-nav-link { font-size: 25px; }
+
+.footer-bottom {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.payment-img {
+    max-width: 335px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    color: var(--sonic-silver);
+    font-size: var(--fs-8);
+    font-weight: var(--weight-500);
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+}
+
+    .copyright a {
+        display: inline;
+        color: inherit;
+    }
+
+/* MEDIA QUERTES */
+
+@media (min-width: 480pc) {
+    :root { --fs-1: 1.87rem; }
+
+    .header-top {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--cultured);
+    }
+
+    .header-social-container, .header-top-action { display: none; }
+
+    .header-alert-new {
+        color: var(--sonic-silver);
+        font-size: var(--fs-9);
+        text-transform: uppercase;
+    }
+
+        .header-alert-new b { font-weight: var(--weight-500); }
+
+    .header-main { padding: 25px 0; }
+
+    .mobile-bottom-navigation {
+        border-top-left-radius: var(--border-radius-medium);
+        border-top-right-radius: var(--border-radius-medium);
+    }
+
+    .slider-item { aspect-ratio: 5 / 3;}
+
+    .banner-content {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        max-width: 320px;
+    }
+
+    .banner-subtile { --fs-7: 1rem}
+
+    .banner-text {
+        display: block;
+        color: var(--sonic-silver);
+        font-size: var(--fs-7);
+        font-weight: var(--weight-500);
+        margin-bottom: 10px;
+    }
+
+        .banner-text b { font-size: var(--fs-2); }
+
+        .banner-btn { padding: 7px 20px; }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .cta-content { padding: 40px; }
+
+        .cta-content .discount {
+            --fs-11: .875rem;
+            padding: 5px 10px;
+        }
+
+    .cta-title { --fs-5: 1.5rem; }
+    .cta-text { --fs-7: 1rem; }
+    .cta-btn { --fs-9: 1rem; }
+
+    .copyright { --fs-8: .875rem;}
+}
+
+@media (min-width: 570px) {
+    .header-top .container, .header-main .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-logo { margin-bottom: 0; }
+
+    .header-top-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+        .header-top-action select {
+            border: none;
+            display: block;
+            min-width: 80px;
+            padding: 5px 0;
+            font: inherit;
+            color: var(--sonic-silver);
+            font-size: var(--fs-8);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition-timing);
+        }
+
+            .header-top-action select:hover { color: var(--eerie-black); }
+
+    .header-social-container { min-width: 300px; }
+
+    .slider-item { aspect-ratio: 4 / 2; }
+
+    .banner-content { background: none; }
+
+    .category-item-container { gap: 30px; }
+
+    .category-item { min-width: calc(50% - 15px); }
+
+    .product-minimal .showcase-container { min-width: 50%; }
+
+    .product-featured .showcase-img {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .product-featured .countdown { gap: 20px; }
+
+    .cta-container { aspect-ratio: 6 / 5; }
+
+    .blog-card { min-width: calc(50% - 15px); }
+}
+
+@media (min-width: 768px) {
+    :root { --fs-1: 2.375rem; }
+
+    html { font-size: 17px; }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .modal-content {
+        display: flex;
+        align-items: center;
+        max-width: 750px;
+        width: fit-content;
+    }
+
+    .newsletter-img { display: block; }
+
+    .newsletter { text-align: left; }
+
+    .header-main .container { gap: 80px; }
+
+    .header-search-container { flex-grow: 1; }
+
+    .slider-item {
+        aspect-ratio: auto;
+        height: 350px;
+    }
+
+    .banner-content { max-width: 380px; }
+
+    .banner-subtile { --fs-7: 1.25rem; }
+    .banner-text { --fs-7: 1.25rem; }
+        .banner-text b { --fs-2: 1.875rem; }
+        
+    .banner-btn { --fs-11: .75rem; }
+
+    .category-img-box { padding: 20px; }
+
+    .product-minimal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+        .product-minimal .product-showcase {
+            min-width: calc(50% - 10px);
+            width: calc(50% - 10px);
+        }
+
+        .product-minimal .showcase-container { min-width: 100%; }
+
+    .product-featured .showcase {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .product-featured .showcase-img { max-width: fit-content; }
+
+    .product-featured .showcase-content {
+        margin-top: 0;
+        min-width: calc(100% - 345px);
+    }
+
+    .footer-nav .container {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 20px;
+    }
+
+    .footer-nav-list {
+        min-width: calc(33.33% - 15px);
+        width: calc(33.33% -15px);
+        flex-grow: 1;
+    }
+
+    .footer-nav-list:not(:last-child) { margin-bottom: 0; }
+}
+
+@media (min-width: 1024px) {
+
+    :root {
+        --fs-1: 2.625rem;
+        --fs-2:1.125rem;
+    }
+
+    .container { max-width: 980px; }
+
+    .notification-toast { bottom: 30px; }
+
+    .header-social-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header-social-container .social-link {
+        padding: 5px;
+        background: hsl(0, 0%, 95%);
+        border-radius: var(--border-radius-small);
+        color: var(--sonic-silver);
+        transition: var(--transition-timing);
+    }
+
+        .header-social-container .social-link:hover {
+            background: var(--salmon-pink);
+            color: var(--white);
+        }
+
+    .header-user-action {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+        .header-user-action .action-btn {
+            position: relative;
+            font-size: 35px;
+            color: var(--onyx);
+            padding: 5px;
+        }
+
+        .header-user-action .count {
+            position: absolute;
+            top: -2px;
+            right: -3px;
+            background: var(--bittersweet);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: var(--weight-500);
+            line-height: 1;
+            padding: 2px 4px;
+            border-radius: 20px;
+        }
+
+    .desktop-navigation-menu { display: block; }
+
+    .desktop-menu-category-list {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+        .desktop-menu-category-list .menu-category:not(:nth-child(2)) { position: relative; }
+
+            .desktop-menu-category-list .menu-category > .menu-title {
+                position: relative;
+                color: var(--onyx);
+                font-size: var(--fs-7);
+                font-weight: var(--weight-600);
+                text-transform: uppercase;
+                padding: 15px 0;
+                transition: var(--transition-timing);
+            }
+
+                .desktop-menu-category-list .menu-category > .menu-title:hover { color: var(--salmon-pink); }
+
+                .desktop-menu-category-list .menu-category > .menu-title::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--salmon-pink);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: var(--transition-timing);
+                }
+
+                    .desktop-menu-category-list .menu-category > .menu-title::after { transform: scaleX(1); }
+
+                .desktop-menu-category-list .menu-category:hover > .dropdown-panel {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+
+                .desktop-menu-category-list .menu-category:hover > .dropdown-list {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+
+    .dropdown-panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+        border: 1px solid var(--cultured);
+        box-shadow: 0 3px 5px hsla(0, 0%, 0%, .1);
+        border-radius: var(--border-radius-medium);
+        transform: translateY(50px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: var(--transition-timing);
+        z-index: 5;
+    }
+
+    .dropdown-panel-list .menu-title a {
+        color: var(--onyx);
+        font-size: var(--fs-7);
+        font-weight: var(--weight-600);
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--cultured);
+        margin-bottom: 10px;
+    }
+
+    .panel-list-item a {
+        color: var(--sonic-silver);
+        font-size: var(--fs-7);
+        text-transform: capitalize;
+        transition: var(--transition-timing);
+    }
+
+        .panel-list-item a:hover { color: var(--salmon-pink); }
+
+        .panel-list-item:not(:last-child) a { padding: 4px 0; }
+
+        .panel-list-item:last-child {margin-top: 20px; }
+
+    .panel-list-item img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-small);
+    }
+
+    .dropdown-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+        background: var(--white);
+        padding: 20px 0;
+        border-radius: var(--border-radius-medium);
+        border: 1px solid var(--cultured);
+        box-shadow: 0 3px 3px hsla(0, 0%, 0%, .1);
+        transform: translateY(50px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: var(--transition-timing);
+        z-index: 5;
+    }
+
+        .dropdown-list .dropdown-list a {
+            color: var(--sonic-silver);
+            font-size: var(--fs-7);
+            text-transform: capitalize;
+            padding: 4px 20px;
+            transition: var(--transition-timing);
+        }
+
+            .dropdown-list .dropdown-item a:hover { color: var(--salmon-pink); }
+
+        .mobile-bottom-navigation { display: none; }
+
+    .banner { margin-top: 0; }
+
+    .slider-item { height: 360px; }
+
+    .banner-content { 
+        left: 75px;
+        max-width: 400px;
+    }
+
+    .banner-subtile { --fs-7: 1.625rem; }
+    .banner-text { --fs-7: 1.625rem; }
+    .banner-btn { --fs-11: .875rem; }
+
+    .category-item { min-width: calc(33.33% - 20px); }
+    .category-img-box { padding: 10px; }
+
+    .product-container .container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sidebar {
+        --fs-5: .941rem;
+
+        position: sticky;
+        top: 30px;
+        left: 0;
+        padding: 0px;
+        min-width: calc(25% - 15px);
+        margin-bottom: 30px;
+        visibility: visible;
+        overflow-y: auto;
+        overscroll-behavior: auto;
+        z-index: 0;
+    }
+
+    .sidebar-category {
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 1px solid var(--cultured);
+        border-radius: var(--border-radius-medium);
+    }
+
+    .sidebar-close-btn { display: none; }
+
+    .product-box { min-width: calc(75% - 15px);}
+
+    .product-minimal { margin-bottom: 20px; }
+
+        .product-minimal .product-showcase {
+            min-width: calc(33.33% - 14px);
+            width: calc(33.33% - 14px);
+            flex-grow: 1;
+        }
+
+        .product-minimal .showcase-wrapper { gap: 10px; }
+        .product-minimal .showcase-container { padding: 2px; }
+
+    .product-featured .countdown-content { padding: 5px 10px; }
+
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .testimonial-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .testimonial-card {margin-bottom: 0; }
+
+    .testimonial, .cta-container {
+        min-width: calc(50% -15px);
+        width: calc(50% - 15px);
+        margin-bottom: 0;
+    }
+
+    .service { width: 100%; }
+    .service-container { gap: 0; }
+
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        min-width: 20%;
+    }
+
+    .blog-container { padding-top: 20px; }
+    .blog-card { min-width: calc(33.33% - 20px); }
+    .blog-title { --fs-5: 1rem}
+
+    .footer-nav-list {
+        min-width: calc(20% - 16px);
+        width: calc(20% - 16px);
+    }
+
+    .footer-nav-list:last-child { display: none; }
+
+    .footer-bottom { margin-bottom: 0; }
+}
+
+@media (min-width: 1200px){
+    .container {max-width: 1200px; }
+
+    .desktop-menu-category-list { gap: 45px; margin-bottom: 20px;}
+
+    .slider-item:last-child .banner-img { object-position: top; }
+
+    .category-item { min-width: calc(25% - 22.5px); }
+    .category-item-title { --fs-9: .824rem; }
+
+    .product-featured .showcase > div { min-width: calc(50% -10px); }
+    .product-featured .display-number { --fs-5: 1.125rem; }
+    .product-grid { grid-template-columns: repeat(4, 1fr); }
+
+    .testimonial, .service {
+        min-width: calc(25% - 20px);
+        width: calc(25% - 20px);
+    }
+
+    .cta-container {
+        min-width: calc(50% -20px);
+        width: calc(50% - 20px);
+        aspect-ratio: unset;
+    }
+
+    .service-container {
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 30px;
+    }
+
+    .service-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .blog { margin-bottom: 50px; }
+    .blog-card { min-width: calc(25% - 22.5px); }
+
+    footer {padding-top: 50px; }
+
+    .footer-category {
+        margin-bottom: 50px;
+        padding-bottom: 35px;
+    }
+
+    .footer-nav { padding-bottom: 50px; }
+}
+
+@media (min-width: 1400px) {
+
+    html { font-size: 18px; }
+
+    .container { max-width: 1350px; }
+
+    .banner-content {
+        left: 110px;
+        max-width: 460px;
+    }
+}
+
+
+/* Quantity selector container */
+.qty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Quantity number display */
+.qty {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--eerie-black);
+  width: 30px;
+  text-align: center;
+}
+
+/* Plus / Minus buttons */
+.qty-container button {
+  background-color: var(--salmon-pink);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.qty-container button:hover {
+  background-color: var(--bittersweet);
+}
+
+/* Show Quantity button */
+.show-qty-btn {
+  background-color: var(--ocean-green);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: var(--fs-6);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.show-qty-btn:hover {
+  background-color: hsl(152, 51%, 42%);
+}
+
+
+
+
+</style>
+
+<body>
+    <header>
+        <div class="anon">
+            <a href="#">
+                <img class="anon1" src="https://i.postimg.cc/XYYNC3X8/logo.png" alt="logo" width="120" height="36">
+            </a>
+        </div>
+        <input type="search" name="search" placeholder="Search Anything...">
+        <h4 class="show">Jackets</h4>
+    </header>
+
+    <!-- main -->
+
+    <main>
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81IrgTl2p6L._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>CAMEY Men's Regular Fit Bomber Jacket For Winter Wear |Full Sleeve | Zipper | Casual Jacket For Mens & Boys | Western Stylish Jacket For Men</h2>
+                <p>₹2499.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/51JIOU9vZIL._AC_UY1100_.jpg">
+                <h2>KOTTY Long Sleeve Padded Puffer Men Winterwear Jacket. Scott International Men's Solid Cotton Hooded-Neck Hoodies For Men</h2>
+                <p>₹789.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81yvrnXh3NL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Scott International Men's Solid Cotton Hooded-Neck Hoodies For Men. Scott International Men's Solid Cotton Hooded-Neck Hoodies For Men</h2>
+                <p>₹999.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81eqOdy8HaL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>CAMEY Men's Regular Fit Bomber Jacket For Winter Wear |Full Sleeve | Zipper | Casual Jacket For Mens & Boys | Western Stylish Jacket For Men</h2>
+                <p>₹1599.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+        kiaa
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71EdukK7mpL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Boldfit Poly Cotton Hoodies for Men Stylish Sweatshirt for Men Winter Wear for Men Solid Sweatshirts High Neck Winter Sweatshirts for Men Hoodie for Men Travel Winter Hoodies</h2>
+                <p>₹999.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81MabGLeOBL._AC_UY1100_.jpg">
+                <h2>L'MONTE Men's Heavy-Duty Winter Jacket – Cotton Outdoor Coat with Fleece Lining, Detachable Hood, and Multi-Pockets – Warm, Windproof & Stylish for Cold Weather</h2>
+                <p>₹4600.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/61yji+R1RaL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Casual Jacket,White Jacket,Men Winter Jacket,Stylish Jacket,Light Weight Jacket,Full Sleeve Polyster Bomber Jacket,Jacket For Men,jacket05. Super hot for YOU</h2>
+                <p>₹499.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81P+PlZ0BCL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>BESIMPLE Winter Wear Hooded | Sweatshirt for Men's & Boys- Cotton | Unisex-Adult Cotton & Neck Hoodies | Casual Party Lightweight Fashionable Trendy Solid | Men Winter Hoodie</h2>
+                <p>₹680.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+        <!-- part2 -->
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71yeGDQfnRL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Winter Wear Solid Full Sleeves Long Coats for Men. 100% Free size for all hieght people. Smooth Jute Fabric and brown color. Scott International Men's Solid Cotton Hooded-Neck for sexy men and women also  </h2>
+                <p>₹4500.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/41QESd8KsxL._AC_UY1100_.jpg">
+                <h2>Winter Long Jacket Men -20Degree Warm White Duck Down Jacket Parkas Coat Fur Hooded Windbreaker Men Casual Jacket Doudoune Homme</h2>
+                <p>₹6999.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/61uXQvzqtrL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Cantabil Black Winter Wear Jacket Full Sleeve for Men l Jacket for Men l Winter Wear Jacket for Men (P_MJKT00110_BLACK). Scott International Men's Solid Cotton Hooded-Neck For Men</h2>
+                <p>₹1500.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/A1sJwTfKU+L._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>CHKOKKO Men Checked Winter Wear Regular Fit Coat Grey. Scott International Men's Solid Cotton Hooded-Neck For Men Scott International Men's Solid Cotton Hooded-Neck Hoodies For Men</h2>
+                <p>₹1200.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+
+        <!-- part3 -->
+        kiaa
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71EdukK7mpL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Boldfit Poly Cotton Hoodies for Men Stylish Sweatshirt for Men Winter Wear for Men Solid Sweatshirts High Neck Winter Sweatshirts for Men Hoodie for Men Travel Winter Hoodies</h2>
+                <p>₹999.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81MabGLeOBL._AC_UY1100_.jpg">
+                <h2>L'MONTE Men's Heavy-Duty Winter Jacket – Cotton Outdoor Coat with Fleece Lining, Detachable Hood, and Multi-Pockets – Warm, Windproof & Stylish for Cold Weather</h2>
+                <p>₹4600.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/61yji+R1RaL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Casual Jacket,White Jacket,Men Winter Jacket,Stylish Jacket,Light Weight Jacket,Full Sleeve Polyster Bomber Jacket,Jacket For Men,jacket05. Super hot for YOU</h2>
+                <p>₹499.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81P+PlZ0BCL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>BESIMPLE Winter Wear Hooded | Sweatshirt for Men's & Boys- Cotton | Unisex-Adult Cotton & Neck Hoodies | Casual Party Lightweight Fashionable Trendy Solid | Men Winter Hoodie</h2>
+                <p>₹680.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+        <!-- part4 -->
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/61Ol0meyyjL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>ELLIPSE Nylon Jackets For Women Winter Jacket Full Sleeves Hooded Jackets For Girls With Pocket - Small, Lavender</h2>
+                <p>₹1500.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81cbS75Q+DL._AC_UY1100_.jpg">
+                <h2>Fashion2wear Women's Georgette Fit and Flare V-Neck Gown Elegant Silhouette made by hot fabric</h2>
+                <p>₹499.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81PxZTJ-fPL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>TWENTY ME Winter Wear/Casual Wear/Outdoor Wear/Wool Blend/Collared/Checked/Full Sleeve Women's Coat (4283)</h2>
+                <p>₹2650.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/91a8io8qJfL._AC_UY1100_.jpg">
+                <h2>ELLIPSE Fashion Ladies winter jacket for women with hoodie jacket for women winter wear Full</h2>
+                <p>₹1500.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+        <!-- part-5 -->
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71vmEHtF6HL._AC_UY1100_.jpg">
+                <h2>STUFFLIN Casual Women's Hooded Collar Jacket Full Sleeve Winter Wear Solid Quilted Neck Jacket for Women Girls</h2>
+                <p>₹600.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71Si4M+oBlL._AC_UY1100_.jpg">
+                <h2>TWENTY ME Winter Wear Casual Wear Outdoor Wear Wool Full Sleeve Women's Coat only at  Anon</h2>
+                <p>₹899.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/71vhNlFkRIL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>SCOLLER SOLID QUILT WOMEN JACKET FOR WINTER WEAR ONLY AT ANON</h2>
+                <p>₹720.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81BKT4Z+SHL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Great Yarnefy Gown for Girls Long Frock Maxi Dress with Jacket (10-11 Years, Red color) at Anon</h2>
+                <p>₹999.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+
+        <!-- part-6 -->
+        <div class="pro-1">
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/61rWv0k6xmL._AC_UY1100_.jpghttps://m.media-amazon.com/images/I/61rWv0k6xmL._AC_UY1100_.jpg"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Snow Jacket For Women Winter Wear Full Sleeves Jacket Polar Fleece Zipper Hooded Warm Jackets</h2>
+                <p>₹899.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://m.media-amazon.com/images/I/81KhuJS-mvL._AC_UY1100_.jpghttps://m.media-amazon.com/images/I/81KhuJS-mvL._AC_UY1100_.jpg">
+                <h2>CHKOKKO Polycotton Winter Wear Double Breasted Long Coat for Women brown color only at ANON</h2>
+                <p>₹1560.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+                <!-- <a href="payment.html"> <a href="payment.html"> <button>Buy Now</button> </a> </a> -->
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPxi2u8xv_xXTKAvYDJgsdDXfUjgjrOVu4bg&s"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>ELEVEIGHT Winter Wear Soft & Warm Woolen Polyester Self Knit fabric Full Sleeve Coat For Women's</h2>
+                <p>₹2749.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+            <div class="part-1">
+                <img class="japn1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohpKoxU5N2vAFoHQgGL5AJKZntNOSqPwq5Q&s"
+                    alt="relaxed short full sleeve t-shirt">
+                <h2>Fashionable Jacket For Girls Jacket For Women’s Latest Solid Color Stylish Long Jacket/Women's Quilted Jacket</h2>
+                <p>₹850.00</p>
+
+                <div class="qty-container">
+                    <button onclick="decreaseQty(this)">−</button>
+                    <span class="qty">1</span>
+                    <button onclick="increaseQty(this)">+</button>
+                  </div>
+                <a href="payment.html"> <button>Buy Now</button> </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="footer-category">
+            <div class="container">
+                <h2 class="footer-category-title">Brand Directory</h2>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Fashion :</h3>
+
+                    <a href="#" class="footer-category-link">T-Shirt</a>
+                    <a href="#" class="footer-category-link">Shirts</a>
+                    <a href="#" class="footer-category-link">Shorts & Jeans</a>
+                    <a href="#" class="footer-category-link">Jacket</a>
+                    <a href="#" class="footer-category-link">Dress & Frook</a>
+                    <a href="#" class="footer-category-link">Innerwear</a>
+                    <a href="#" class="footer-category-link">Hosiery</a>
+                </div>
+
+                <div class="footer-category-link">
+                    <h3 class="category-box-title">Footwear :</h3>
+
+                    <a href="#" class="footer-category-link">Sport</a>
+                    <a href="#" class="footer-category-link">Formal</a>
+                    <a href="#" class="footer-category-link">Boots</a>
+                    <a href="#" class="footer-category-link">Casual</a>
+                    <a href="#" class="footer-category-link">Cowboy Shoes</a>
+                    <a href="#" class="footer-category-link">Safety Shoes</a>
+                    <a href="#" class="footer-category-link">Party wear Shoes</a>
+                    <a href="#" class="footer-category-link">Branded</a>
+                    <a href="#" class="footer-category-link">Firstcopy</a>
+                    <a href="#" class="footer-category-link">Long Shoes</a>
+                </div>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Jewellery :</h3>
+
+                    <a href="#" class="footer-category-link">Necklace</a>
+                    <a href="#" class="footer-category-link">Earrings</a>
+                    <a href="#" class="footer-category-link">Couple Ring</a>
+                    <a href="#" class="footer-category-link">Pendant</a>
+                    <a href="#" class="footer-category-link">Crystal</a>
+                    <a href="#" class="footer-category-link">Bangles</a>
+                    <a href="#" class="footer-category-link">Bracelets</a>
+                    <a href="#" class="footer-category-link">Nosepin</a>
+                    <a href="#" class="footer-category-link">Chain</a>
+                </div>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Cosmetics :</h3>
+
+                    <a href="#" class="footer-category-link">Shampoo</a>
+                    <a href="#" class="footer-category-link">Bodywash</a>
+                    <a href="#" class="footer-category-link">Facewash</a>
+                    <a href="#" class="footer-category-link">Makeup</a>
+                    <a href="#" class="footer-category-link">Liner</a>
+                    <a href="#" class="footer-category-link">Lipstick</a>
+                    <a href="#" class="footer-category-link">Perfume</a>
+                    <a href="#" class="footer-category-link">Body Soap</a>
+                    <a href="#" class="footer-category-link">Scrub</a>
+                    <a href="#" class="footer-category-link">Hair Gel</a>
+                    <a href="#" class="footer-category-link">hair Color</a>
+                    <a href="#" class="footer-category-link">Hair Dye</a>
+                    <a href="#" class="footer-category-link">Sunscreen</a>
+                    <a href="#" class="footer-category-link">Skin Loson</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <div class="container">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Popular categories</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Fashion</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Electronic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cosmetic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Health</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Watches</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Popular </a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Fashion</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Electronic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cosmetic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Health</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Watches</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Our Company</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Legall Notice</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">About us</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure Payment</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Sevices</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Prices Drop</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">New Products</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best Sales</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Contact</h2>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="content">
+                            J - 443 Krishna Park ,
+                            Devli Road, New Delhi, 110062, India
+                        </address>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+607936-8058" class="footer-nav-link">(+91) 70421-36926</a>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:example@gmail.com" class="footer-nav-link">ashish@gmail.com</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Follow Us</h2>
+                    </li>
+
+                    <li>
+                        <ul class="social-link">
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <img src="https://i.postimg.cc/43GKnVFF/Payment.png" alt="Payment method" class="payment-img">
+                <p class="copyright">Copyright &copy; <a href="#">Anon</a>all rights reservd</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Increase quantity
+        function increaseQty(button) {
+          const qtySpan = button.parentElement.querySelector('.qty');
+          let currentQty = parseInt(qtySpan.textContent);
+          qtySpan.textContent = currentQty + 1;
+        }
+      
+        // Decrease quantity (minimum 1)
+        function decreaseQty(button) {
+          const qtySpan = button.parentElement.querySelector('.qty');
+          let currentQty = parseInt(qtySpan.textContent);
+          if (currentQty > 1) {
+            qtySpan.textContent = currentQty - 1;
+          }
+        }
+      
+        // Show selected quantity
+        function showQty(button) {
+          const parent = button.previousElementSibling; // the .qty-container div
+          const qty = parent.querySelector('.qty').textContent;
+          alert(`Selected quantity: ${qty}`);
+        }
+      </script>
+      
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anon</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="index.css">
+    <div class="blog">
+           
+        <div class="container">
+            <h1>Our Customer Blogs</h1>
+            <div class="blog-container has-scrollbar">
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://i.postimg.cc/2886v00v/blog-1.jpg" alt="Clothes Retail KPIs 2023 Guide for Clothes Executives" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Fashion</a>
+                        <a href="#"><h3 class="blog-title">Clothes Retail KPIs 2023 Guide for Clothes Executives</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Admin</cite> <time datetime="2024-04-06">Apr 06, 2024</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://i.postimg.cc/cJWPgbmG/blog-2.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Clothes</a>
+                        <a href="#"><h3 class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Salaar</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://i.postimg.cc/BQkj0xCK/blog-3.jpg" alt="EBT vendors: Claim Your Share of SNAP Online Reveune" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Clothes</a>
+                        <a href="#"><h3 class="blog-title">EBT vendors: Claim Your Share of SNAP Online Reveune</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Selsa</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://i.postimg.cc/43Jskdjc/blog-4.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Electionics</a>
+                        <a href="#"><h3 class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Pawar</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-container has-scrollbar">
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi1ZJvbeTQN43-a--Ldss0YRPX-zjHCNIrEA&s" alt="Clothes Retail KPIs 2023 Guide for Clothes Executives" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Fashion</a>
+                        <a href="#"><h3 class="blog-title">Clothes Retail KPIs 2023 Guide for Clothes Executives</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Admin</cite> <time datetime="2024-04-06">Apr 06, 2024</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQlB4syeNcjHdaqtUL3idn6xPrt_uOa-vwgg&s" alt="Curbside fashion Trends: How to Win the Pickup Battle" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Clothes</a>
+                        <a href="#"><h3 class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Salaar</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ZaTiIRIBIGXB3Tw2BoepjLgHC9TaE3BmQQ&s" alt="EBT vendors: Claim Your Share of SNAP Online Reveune" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Clothes</a>
+                        <a href="#"><h3 class="blog-title">EBT vendors: Claim Your Share of SNAP Online Reveune</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Selsa</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <a href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSytZfRmUab1Dj6x8IL-oGvoDV7KE1-Tu4yg&s" alt="Curbside fashion Trends: How to Win the Pickup Battle" class="blog-banner" width="300">
+                    </a>
+
+                    <div class="blog-content">
+                        <a href="#" class="blog-category">Electionics</a>
+                        <a href="#"><h3 class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle</h3></a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestias excepturi recusandae sequi optio aperiam quibusdam enim quaerat neque illum, aspernatur in cum id repudiandae odio nulla debitis magni ea perferendis ut maxime quisquam ducimus possimus? Saepe iure magnam, non molestias totam necessitatibus dolorum ipsum eius deserunt accusamus blanditiis commodi impedit sequi doloribus. Dolorem ab facilis reiciendis dolorum, quibusdam magni sed in voluptatibus quo cumque. Molestias maxime voluptas quo nulla illum voluptatem odio adipisci aliquid enim quisquam expedita perspiciatis eos autem, magni nihil dolores animi nostrum quam exercitationem corrupti sed nisi nam error? Iusto qui nulla totam nostrum sit!</p>
+                        <p class="blog-meta">By <cite>Mr Pawar</cite> <time datetime="2023-02-23">Feb 23, 2023</time></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <footer>
+        <div class="footer-category">
+            <div class="container">
+                <h2 class="footer-category-title">Brand Directory</h2>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Fashion :</h3>
+
+                    <a href="#" class="footer-category-link">T-Shirt</a>
+                    <a href="#" class="footer-category-link">Shirts</a>
+                    <a href="#" class="footer-category-link">Shorts & Jeans</a>
+                    <a href="#" class="footer-category-link">Jacket</a>
+                    <a href="#" class="footer-category-link">Dress & Frook</a>
+                    <a href="#" class="footer-category-link">Innerwear</a>
+                    <a href="#" class="footer-category-link">Hosiery</a>
+                </div>
+
+                <div class="footer-category-link">
+                    <h3 class="category-box-title">Footwear :</h3>
+
+                    <a href="#" class="footer-category-link">Sport</a>
+                    <a href="#" class="footer-category-link">Formal</a>
+                    <a href="#" class="footer-category-link">Boots</a>
+                    <a href="#" class="footer-category-link">Casual</a>
+                    <a href="#" class="footer-category-link">Cowboy Shoes</a>
+                    <a href="#" class="footer-category-link">Safety Shoes</a>
+                    <a href="#" class="footer-category-link">Party wear Shoes</a>
+                    <a href="#" class="footer-category-link">Branded</a>
+                    <a href="#" class="footer-category-link">Firstcopy</a>
+                    <a href="#" class="footer-category-link">Long Shoes</a>
+                </div>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Jewellery :</h3>
+
+                    <a href="#" class="footer-category-link">Necklace</a>
+                    <a href="#" class="footer-category-link">Earrings</a>
+                    <a href="#" class="footer-category-link">Couple Ring</a>
+                    <a href="#" class="footer-category-link">Pendant</a>
+                    <a href="#" class="footer-category-link">Crystal</a>
+                    <a href="#" class="footer-category-link">Bangles</a>
+                    <a href="#" class="footer-category-link">Bracelets</a>
+                    <a href="#" class="footer-category-link">Nosepin</a>
+                    <a href="#" class="footer-category-link">Chain</a>
+                </div>
+
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Cosmetics :</h3>
+
+                    <a href="#" class="footer-category-link">Shampoo</a>
+                    <a href="#" class="footer-category-link">Bodywash</a>
+                    <a href="#" class="footer-category-link">Facewash</a>
+                    <a href="#" class="footer-category-link">Makeup</a>
+                    <a href="#" class="footer-category-link">Liner</a>
+                    <a href="#" class="footer-category-link">Lipstick</a>
+                    <a href="#" class="footer-category-link">Perfume</a>
+                    <a href="#" class="footer-category-link">Body Soap</a>
+                    <a href="#" class="footer-category-link">Scrub</a>
+                    <a href="#" class="footer-category-link">Hair Gel</a>
+                    <a href="#" class="footer-category-link">hair Color</a>
+                    <a href="#" class="footer-category-link">Hair Dye</a>
+                    <a href="#" class="footer-category-link">Sunscreen</a>
+                    <a href="#" class="footer-category-link">Skin Loson</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <div class="container">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Popular categories</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Fashion</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Electronic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cosmetic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Health</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Watches</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Popular </a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Fashion</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Electronic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cosmetic</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Health</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Watches</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Our Company</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Legall Notice</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">About us</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure Payment</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-title">Sevices</a></li>
+
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Prices Drop</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">New Products</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best Sales</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact</a></li>
+                    <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="content">
+                            J - 443  Krishna Park ,
+                            Devli Road, New Delhi, 110062, India
+                        </address>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+607936-8058" class="footer-nav-link">(+91) 70421-36926</a>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:example@gmail.com" class="footer-nav-link">ashish@gmail.com</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+
+                    <li>
+                        <ul class="social-link">
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <img src="https://i.postimg.cc/43GKnVFF/Payment.png" alt="Payment method" class="payment-img">
+                <p class="copyright">Copyright &copy; <a href="#">Anon</a>all rights reservd</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
